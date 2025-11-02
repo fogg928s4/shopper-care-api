@@ -1,0 +1,23 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model List {
+    id Int @id
+    name String
+    items Int
+    type Int 
+    color String
+}
+
+model Item {
+    id Int @id @unique
+    title String
+    image String
+    color String
+}
