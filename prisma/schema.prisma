@@ -8,7 +8,7 @@ datasource db {
 }
 
 model List {
-    id Int @id
+    id Int @id @default(autoincrement()) @unique
     name String
     items Int
     type Int 
@@ -16,7 +16,7 @@ model List {
 }
 
 model Item {
-    id Int @id @unique
+    id Int @id @unique @default(autoincrement())
     title String
     image String
     color String
