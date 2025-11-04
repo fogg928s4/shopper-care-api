@@ -7,7 +7,7 @@ export interface ItemDTO {
 
 export interface ItemResponseDTO {
     message: string;
-    content: ItemDTO;
+    content: ItemDTO | null;
 }
 
 export interface ItemCreateDTO {
